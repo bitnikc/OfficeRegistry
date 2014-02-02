@@ -1,9 +1,14 @@
 package oving4;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Kontor {
 	private char bygning;
 	private int etasje;
 	private int romnummer;
+	private int maksAntall;
+	private ArrayList<Ansatt> ansatte;
 	
 	public char getBygning() {
 		return bygning;
@@ -33,6 +38,18 @@ public class Kontor {
 		this.bygning = bygning;
 		this.etasje = etasje;
 		this.romnummer = romnummer;
+		this.maksAntall = 1;
+	}
+	
+	public Kontor(char bygning, int etasje, int romnummer, int maksAntall) {
+		this.bygning = bygning;
+		this.etasje = etasje;
+		this.romnummer = romnummer;
+		this.maksAntall = maksAntall;
+	}
+	
+	public void leggTilAnsatt (Ansatt e) {
+		ansatte.add(e);
 	}
 		
 	public String toString() {
