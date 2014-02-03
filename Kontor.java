@@ -1,7 +1,6 @@
 package oving4;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Kontor {
 	private char bygning;
@@ -49,7 +48,10 @@ public class Kontor {
 	}
 	
 	public void leggTilAnsatt (Ansatt e) {
-		ansatte.add(e);
+		if (isBuildingFull())
+			System.out.println("Bygningen har ikke flere plasser!");
+		else
+			ansatte.add(e);
 	}
 		
 	public String toString() {
@@ -57,6 +59,10 @@ public class Kontor {
 		if (romnummer < 10) resultat += "0";
 		resultat += romnummer;
 		return resultat;
+	}
+	
+	public boolean isBuildingFull() {
+		return !(this.ansatte.size() < this.maksAntall);
 	}
 	
 	public static void main(String[] args) {
