@@ -38,6 +38,7 @@ public class Kontor {
 		this.etasje = etasje;
 		this.romnummer = romnummer;
 		this.maksAntall = 1;
+		this.ansatte = new ArrayList<Ansatt>();
 	}
 	
 	public Kontor(char bygning, int etasje, int romnummer, int maksAntall) {
@@ -45,11 +46,12 @@ public class Kontor {
 		this.etasje = etasje;
 		this.romnummer = romnummer;
 		this.maksAntall = maksAntall;
+		this.ansatte = new ArrayList<Ansatt>();
 	}
 	
 	public void leggTilAnsatt (Ansatt e) {
 		if (isBuildingFull())
-			System.out.println("Bygningen har ikke flere plasser!");
+			System.out.println("Bygningen har ikke flere ledige plasser!");
 		else
 			ansatte.add(e);
 	}
@@ -63,6 +65,11 @@ public class Kontor {
 	
 	public boolean isBuildingFull() {
 		return !(this.ansatte.size() < this.maksAntall);
+	}
+	
+	public void skrivUtAnsattListe() {
+		for (Ansatt i : ansatte)
+			System.out.println(i.toString());
 	}
 	
 	public static void main(String[] args) {
