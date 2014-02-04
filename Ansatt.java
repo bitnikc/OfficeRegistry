@@ -13,6 +13,7 @@ public class Ansatt {
 		this.epostadresse = epostadresse;
 		this.telefon = telefon;
 		this.kontor = kontor;
+		kontor.leggTilAnsatt(this);
 	}
 	
 	public String getFornavn() {

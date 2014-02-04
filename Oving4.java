@@ -18,10 +18,10 @@ public class Oving4 {
 
 	public static void main(String[] args) {
 		Kontor k1 = new Kontor('E', 2, 12, 2);
+		//Kontor k2 = new Kontor('E', 2, 14, 2);
 		Ansatt a1 = new Ansatt("Abc", "KC", "abc@kc.cc", "12345678", k1);
 		Ansatt a2 = new Ansatt("Cde", "KC", "cde@kc.cc", "91011121", k1);
-		k1.leggTilAnsatt(a1);
-		k1.leggTilAnsatt(a2);
+		
 		
 		k1.skrivUtAnsattListe();
 		//double[] numbers = {1.2,2.2,3.4};
