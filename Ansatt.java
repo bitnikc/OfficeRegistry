@@ -55,12 +55,28 @@ public class Ansatt {
 	public void setKontor(Kontor kontor) {
 		this.kontor = kontor;
 	}
-
+/*
 	public String toString() {
 		return "Fornavn:   " + fornavn + "\n"
 			+ "etternavn: " + etternavn + "\n"
 			+ "Epost:     " + epostadresse + "\n"
 			+ "Telefon:   " + telefon + "\n"
 			+ "Kontor:    " + kontor.toString() + "\n";
+	}*/
+
+	public String toString() {
+		StringBuilder strengBygger = new StringBuilder(30);
+		strengBygger.append("Fornavn:	");
+		strengBygger.append(fornavn);
+		strengBygger.append("\nEtternavn:	");
+		strengBygger.append(etternavn);
+		strengBygger.append("\nEpost:		");
+		strengBygger.append(epostadresse);
+		strengBygger.append("\nTelefon:	");
+		strengBygger.append(telefon);
+		strengBygger.append("\nKontor:		");
+		strengBygger.append(kontor);
+		strengBygger.append("\n");
+		return strengBygger.toString();
 	}
 }
